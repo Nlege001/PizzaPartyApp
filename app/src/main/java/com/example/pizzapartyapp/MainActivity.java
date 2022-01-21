@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,13 +46,15 @@ public class MainActivity extends AppCompatActivity {
         moneyCost = findViewById(R.id.cost);
 
 
-        calculateButton.setOnClickListener(new View.OnClickListener()
-        {
-
-            @Override
-            public void onClick(View v) {
-                calculateClick();
+        calculateButton.setOnClickListener(v -> {
+            if(orderName.getText().toString().equals("")){
+                Toast.makeText(getApplicationContext(), "Please provide order name", Toast.LENGTH_SHORT).show();
             }
+            else if(NoOfPeople.getText().toString().equals("")){
+                Toast.makeText(getApplicationContext(), "Please total number of people in the party", Toast.LENGTH_SHORT).show();
+            }
+            else{calculateClick();}
+
         });
 
         clearButton.setOnClickListener(new View.OnClickListener()
@@ -123,4 +126,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

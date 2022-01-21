@@ -1,200 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="152dp"
-        android:text="Number of people"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/NumberOfPeople"
-        android:layout_width="344dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="196dp"
-        android:ems="10"
-        android:hint="please provide the number of people"
-        android:inputType="number"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="256dp"
-        android:text="How Hungry?"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/hungry_radio_group"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="304dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/light_radio_button"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="284dp"
+            android:text="Number of people"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/medium_radio_button"
+        <EditText
+            android:id="@+id/NumberOfPeople"
+            android:layout_width="344dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="336dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/number"
+            android:ems="10"
+            android:hint="please provide the number of people"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Medium" />
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="400dp"
+            android:text="How Hungry?"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/ravenous_radio_button"
+        <RadioGroup
+            android:id="@+id/hungry_radio_group"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="448dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/light_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light" />
+
+            <RadioButton
+                android:id="@+id/medium_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/ravenous_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ravenous" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/totalPizzas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ravenous" />
-    </RadioGroup>
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="632dp"
+            android:text="Total Pizzas : ?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/totalPizzas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="512dp"
-        android:text="Total Pizzas : ?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.widget.Button
+            android:id="@+id/calculate_button"
+            android:layout_width="159dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="712dp"
+            android:text="Calculate"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="159dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="596dp"
-        android:text="Calculate"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="18dp"
-        android:text="Made by: Naol Legesse"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:text="Order for"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/order_name"
-        android:layout_width="208dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:hint="Name of order owner"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="372dp"
-        android:text="Order Size"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/size_radio_group"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="428dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/small_radio_button"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="small" />
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="18dp"
+            android:text="Made by: Naol Legesse"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/medium_pizza_radio_button"
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="188dp"
+            android:text="Order for"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/large_radio_button"
+        <EditText
+            android:id="@+id/order_name"
+            android:layout_width="277dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="232dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/user"
+            android:ems="10"
+            android:hint="Name of order owner"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="large" />
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="520dp"
+            android:text="Order Size"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/size_radio_group"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="568dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/small_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="small" />
+
+            <RadioButton
+                android:id="@+id/medium_pizza_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/large_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="large" />
 
 
-    </RadioGroup>
+        </RadioGroup>
 
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="166dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="196dp"
-        android:layout_marginTop="596dp"
-        android:text="clear"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.widget.Button
+            android:id="@+id/clear_button"
+            android:layout_width="166dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="712dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/white"
+            android:text="clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="549dp"
-        android:text="Total Cost : 0$"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="664dp"
+            android:text="Total Cost : 0$"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="261dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
